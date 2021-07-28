@@ -1,0 +1,302 @@
+html {
+  box-sizing: border-box;
+  font-size: 16;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* header */
+
+/* #header {
+} */
+
+#nav {
+  background-color: rgb(0, 3, 14);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#ul li {
+  margin: 0px 20px 0px 20px;
+}
+/*nav*/
+.img {
+  width: 60px;
+  height: 60px;
+  margin: 40px;
+}
+/* #ul {
+  
+} */
+
+#ul li a {
+  font-size: 20px;
+  font-family: "Aldrich", sans-serif;
+  color: rgb(255, 35, 72);
+  transition: color 0.3 ease;
+}
+
+#ul li a:hover {
+  color: rgb(118, 30, 190);
+}
+
+/*principal*/
+#section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(459px, 1fr));
+  grid-gap: 1rem;
+}
+
+.entrada h2 {
+  font-family: "Tourney", cursive;
+  text-align: center;
+}
+
+.entrada {
+  height: 80vh;
+  margin: 4.5rem;
+  /* color: #ff0040; */
+  color: #0ce4f8;
+  background: rgba(0, 0, 0, 0.294);
+
+  box-shadow: -1px 1px 5px 2px #0ce4f8;
+  -webkit-box-shadow: -1px 1px 5px 2px #0ce4f8;
+  -moz-box-shadow: -1px 1px 5px 2px #0ce4f8;
+
+  /* box-shadow: -11px -12px 12px 3px rgba(250, 0, 87, 0.69);
+  -webkit-box-shadow: -11px -12px 12px 3px rgba(250, 0, 87, 0.69);
+  -moz-box-shadow: -11px -12px 12px 3px rgba(250, 0, 87, 0.69); */
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.entrada div {
+  background-position: center;
+  margin: 0px 18px;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0px 0px 10px black;
+}
+
+/*titleeeeeeeeeeeeeeeeeeeeeeeeeee*/
+
+.text {
+  align-items: center;
+  font-family: "Aldrich", sans-serif;
+  text-align: center;
+  padding: 3rem;
+}
+
+#title-box {
+  position: relative;
+  margin: 50px 20%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(1, 0, 39, 0.89),
+    rgba(1, 0, 39, 0.89)
+  );
+}
+
+.box-animate::before,
+.box-animate::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  background: linear-gradient(
+    120deg,
+    #ff0040,
+    #fb7100,
+    #d3e71f,
+    #3afd09,
+    #0ce4f8,
+    #6f00ff,
+    #ff0040,
+    #fb7100,
+    #d3e71f,
+    #3afd09,
+    #0ce4f8,
+    #6f00ff
+  );
+  background-size: 300%;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  z-index: -1;
+  animation: box-gradient 15s ease infinite;
+}
+
+@keyframes box-gradient {
+  0% {
+    background-position: 0% 200%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 0% 330%;
+  }
+}
+
+/* contacto */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 40px;
+}
+
+.label {
+  font-family: "Tourney", cursive;
+  font-size: 20px;
+  color: rgb(236, 226, 255);
+}
+
+input {
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+  width: 30vw;
+  height: 2vw;
+}
+
+textarea {
+  outline: none;
+  width: 30vw;
+  resize: none;
+}
+
+.submit {
+  border: none;
+  font-family: "Tourney", cursive;
+  font-size: 15px;
+  display: block;
+  width: 32%;
+  margin: 20px 0px;
+  height: 5vh;
+  color: black;
+  background-color: rgba(209, 202, 216, 0.726);
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Tourney", cursive;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+/*error de inputs  y de la conexion a la base de datos (se llaman las dos "error"*/
+.error {
+  color: white;
+  background-color: rgb(255, 13, 13);
+  width: 100%;
+}
+
+.success {
+  color: white;
+  background-color: rgb(55, 245, 64);
+  width: 50%;
+}
+
+/*caja padre que tienen en comun error y success*/
+.alert {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Aldrich", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+/*footer*/
+
+#footer {
+  color: rgb(218, 204, 204);
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Tourney", cursive;
+}
+
+/*si no tenes una cuenta*/
+
+.block-aside {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.main {
+  flex-grow: 2;
+}
+
+.box-login {
+  text-align: center;
+  margin: 150px;
+}
+
+/* coso verde donde estan todos los botones*/
+
+.div-login {
+  background: rgba(23, 22, 26, 0.692);
+  position: sticky;
+  z-index: 200;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.other-a {
+  color: whitesmoke;
+}
+
+/* todas las entradas */
+.all-entries {
+  background: rgba(23, 22, 26, 0.548);
+  position: sticky;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Aldrich", sans-serif;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
